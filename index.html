@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Todo app</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+        darkMode : 'class',
+      theme: {
+        extend: {
+            fontFamily:{
+                'josefin': ['Josefin Sans', 'sans-serif'],
+            },
+          colors: {
+           vlightgray : '#fafafa',
+           vlightgrayblue: '#e4e5f1',
+           lightgrayblue: '#d2d3db',
+           darkgrayblue: '#9394a5',
+           vdarkgrayblue: '#484b6a',
+
+           verydarkblue: '#161722',
+           vdarkdesaturatedblue: '#030a5e',
+           lightblue: '#cccee6',
+           lightgrayhover: '#e4e5f1',
+    
+          },
+          backgroundImage:{
+            'darkmode': 'url(images/bg-desktop-dark.jpg)',
+            'lightmode': 'url(images/bg-desktop-light.jpg)',
+            'mobiledarkmode': 'url(images/bg-mobile-dark.jpg)',
+            'mobilelightmode': 'url(images/bg-mobile-light.jpg)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="">
+  
+  <section class="lg:bg-lightmode w-full h-full p-40 bg-repeat-none bg-cover bg-no-repeat bg-mobilelightmode">
+      
+  </section>
+
+  <section class="flex ">
+    <!--THE BIGGEST CONTAINER-->
+    <div class="flex flex-col rounded-full mx-auto space-y-8 absolute top-0 justify-center left-96 ml-60 mt-12 shadow-xl">
+
+      <!--FIRST CONTAINER-->
+   <div class="flex flex-row space-x-60 text-2xl  w-96">
+
+    <h4 class="tracking-widest font-josefin font-bold text-white">TODO</h4>
+    <button class="">
+      <svg class="" xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>
+    </button>
+   </div>
+
+
+   <!---CREATE A NEW TODAY DIV-->
+  
+   <div class="flex justify center">
+    <input type="search" name="" id="" class="border w-96 h-12 bg-white rounded-lg" placeholder="create a new Todo">
+   </div>
+
+
+
+   <!--second container div-->
+   <div class="flex flex-col w-full rounded-">
+
+    <!--1-->
+    <div class="flex flex-row   border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md justify-center bg-white">
+    <input type="checkbox" name="" id="" class="w-4  ">
+    <label for="checkbox" class="">Completed an online javascript course</label>
+    </div> 
+
+    <!--2-->
+    <div class="flex flex-row  border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 justify-center bg-white">
+      <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ">
+      <label for="checkbox" class="">Completed an online javascript course</label>
+    </div> 
+
+   <!---3-->
+
+   <div class="flex flex-row  border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 justify-center bg-white">
+    <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ">
+    <label for="checkbox" class="">Completed an online javascript course</label>
+    </div> 
+
+    <!--4-->
+
+    <div class="flex flex-row  border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 justify-center bg-white">
+      <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ">
+      <label for="checkbox" class="">Completed an online javascript course</label>
+      </div> 
+
+      <!--5-->
+      <div class="flex flex-row border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 justify-center bg-white">
+        <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ">
+        <label for="checkbox" class="">Completed an online javascript course</label>
+        </div> 
+
+    <!--6-->
+    <div class="flex flex-row border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 justify-center bg-white">
+      <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ">
+      <label for="checkbox" class="">Completed an online javascript course</label>
+    </div> 
+
+
+
+
+     <!--the final div container 6-->
+   <div class="flex flex-row space-x-4 rounded-b-md bg-lightgrayblu pt-2 pb-2 justify-center bg-white shadow-lg"> 
+
+    <div>
+    <p class="hover:text-blue-900">5 items left</p>
+    </div>
+
+    <div class="flex flex-row space-x-2 ">
+       <p class="hover:text-blue-700">All</p>
+       <p class="hover:text-blue-700">Active</p>
+       <p class="hover:text-blue-700">Completed</p>
+    </div>
+
+    <div>
+      <p class="hover:text-blue-700">clear completed</p>
+    </div>
+
+  </div>
+   </div>
+
+
+  
+
+
+    </div>
+  </section>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---
+<style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+-->
+
+
+<!--
+
+
+   Todo
+
+  <!-- Add dynamic number  items left--> 
+
+ <!--- All
+  Active 
+  Completed
+
+  Clear Completed
+
+  Drag and drop to reorder list
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+
+
+-->
