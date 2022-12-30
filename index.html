@@ -26,7 +26,9 @@
            vdarkdesaturatedblue: '#030a5e',
            lightblue: '#cccee6',
            lightgrayhover: '#e4e5f1',
-    
+           vdgblue: '#4d5066',
+           blackblue: '#161722',
+           conblue: '#4d4f66',
           },
           backgroundImage:{
             'darkmode': 'url(images/bg-desktop-dark.jpg)',
@@ -41,7 +43,7 @@
 </head>
 <body class="">
   
-  <section class="lg:bg-lightmode w-full h-full p-40 bg-repeat-none bg-cover bg-no-repeat bg-mobilelightmode">
+  <section class="lg:bg-lightmode w-full h-full p-40 bg-repeat-none bg-cover bg-no-repeat bg-mobilelightmode" id="overall-section">
       
   </section>
 
@@ -55,26 +57,26 @@
     <h4 class="tracking-widest font-josefin font-bold text-white">TODO</h4>
     <button class="">
       <!--the mooon-->
-      <svg class="" xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>
+      <svg id="moon" class="" xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>
   <!--the sunnnny sun-->
-      <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>
+      <svg id="sun" class="hidden" xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>
     </button>
    </div>
 
 
-   <!---CREATE A NEW TODAY DIV-->
+   <!---CREATE A NEW TODO DIV-->
   
    <div class="flex justify center">
-    <input type="search" name="" id="" class="border w-96 h-12 bg-white rounded-lg" placeholder="create a new Todo">
+    <input type="search" name="" id="search" class="border w-96 h-12 bg-white rounded-lg" placeholder="create a new Todo">
    </div>
 
 
 
    <!--second container div-->
-   <div class="flex flex-col w-full rounded-">
+   <div class="flex flex-col w-full rounded- bg-white rounded-lg" id="todo">
 
     <!--1-->
-    <div class="flex flex-row   border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-white" draggable="true">
+    <div class="flex flex-row  border-b  border-b-gray-400 bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit" draggable="true">
     <input type="checkbox" name="" id="" class="w-4  mx-auto">
     <label for="checkbox" class="text-md font-josefin">Completed an online javascript course</label>
     <div class="lg:hidden">
@@ -83,7 +85,7 @@
     </div> 
 
     <!--2-->
-    <div class="flex flex-row  border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-white" draggable="true">
+    <div class="flex flex-row border-b-gray-400 border-b bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true">
       <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
       <label for="checkbox" class="text-md font-josefin ">Jog around the park 3x</label>
       <div class="lg:hidden ml-40">
@@ -93,7 +95,7 @@
 
    <!---3-->
 
-   <div class="flex flex-row  border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-white" draggable="true">
+   <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true">
     <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
     <label for="checkbox" class="text-md font-josefin">10 mins meditation</label>
     <div class="lg:hidden">
@@ -103,7 +105,7 @@
 
     <!--4-->
 
-    <div class="flex flex-row  border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-white " draggable="true">
+    <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit " draggable="true">
       <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
       <label for="checkbox" class="text-md font-josefin">Read for 1 hour</label>
       <div class="lg:hidden">
@@ -112,7 +114,7 @@
       </div> 
 
       <!--5-->
-      <div class="flex flex-row border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-white" draggable="true">
+      <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true">
         <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
         <label for="checkbox" class="text-md font-josefin">Pick up groceries</label>
         <div class="lg:hidden">
@@ -121,7 +123,7 @@
         </div> 
 
     <!--6-->
-    <div class="flex flex-row border-b-gray-400 border bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-white" draggable="true">
+    <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true">
       <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
       <label for="checkbox" class="text-md font-josefin">Complete Todo app on frontend mentor</label>
       <div class="lg:hidden">
@@ -139,8 +141,8 @@
     <p class="hover:text-blue-900 opacity-75">5 items left</p>
     </div>
 
-    <div class="lg:relative lg:bg-none lg:mt-0 absolute bg-white shadow-xl rounded-lg top-48 lg:top-0 mt-96 flex border space-x-6 w-full pt-2 pb-2 lg:-left-8  lg:right-2 lg:w-24 lg:shadow-none lg:rounded-none lg:border-none">
-      <div class="flex flex-row space-x-16  lg:relative  mx-auto lg:space-x-2 lg:bg-transparent">
+    <div class="lg:relative lg:bg-none lg:mt-0 absolute shadow-xl rounded-lg top-48 lg:top-0 mt-96 flex border space-x-6 w-full pt-2 pb-2 lg:-left-8  lg:right-2 lg:w-24 lg:shadow-none lg:rounded-none lg:border-none " id="mobile-div">
+      <div class="flex flex-row space-x-16  lg:relative  mx-auto lg:space-x-2 lg:bg-transparent ">
         <p class="hover:text-blue-700">All</p>
         <p class="hover:text-blue-700">Active</p>
         <p class="hover:text-blue-700">Completed</p>
@@ -161,12 +163,15 @@
 </div>
 
 
-<div class="flex  mx-auto lg:mt-80 text-sm opacity-80 font-josefin mt-96">
+<div class="flex  mx-auto lg:mt-80 text-sm opacity-80 font-josefin mt-96" id="d&dmesg">
     <p>Drag and drop to reorder list</p>
 </div>
     
   </section>
  
+
+
+<script src="./main.js"></script>
 </body>
 </html>
 
