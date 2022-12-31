@@ -76,89 +76,85 @@
    <div class="flex flex-col w-full rounded- bg-white rounded-lg" id="todo">
 
     <!--1-->
-    <div class="flex flex-row  border-b  border-b-gray-400 bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit" draggable="true">
-    <input type="checkbox" name="" id="" class="w-4  mx-auto">
-    <label for="checkbox" class="text-md font-josefin">Completed an online javascript course</label>
-    <div class="lg:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+   <!--- <div class="flex flex-row  border-b  border-b-gray-400 bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit" draggable="true" ondrag="dragStart(event)" id="go">
+    <input type="checkbox" name="" id="" class="w-4  ml-1">
+   <label for="checkbox" class="text-md font-josefin" id="first"></label>
+    <div class="lg:hidden absolute right-0 ">
+      <svg class="z-50 bg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
     </div>
     </div> 
 
-    <!--2-->
-    <div class="flex flex-row border-b-gray-400 border-b bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true">
+    <!--2-
+    <div class="flex flex-row border-b-gray-400 border-b bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true" ondragover="dragOver(event)" id="second">
       <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
-      <label for="checkbox" class="text-md font-josefin ">Jog around the park 3x</label>
-      <div class="lg:hidden ml-40">
-        <svg class="ml-24" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+      <label for="checkbox" class="text-md font-josefin "></label>
+      <div class="lg:hidden absolute right-0">
+        <svg class="bg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
       </div>
     </div> 
 
-   <!---3-->
+   <!---3--
 
-   <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true">
+   <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true" id="third">
     <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
-    <label for="checkbox" class="text-md font-josefin">10 mins meditation</label>
-    <div class="lg:hidden">
-      <svg class="ml-32" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+    <label for="checkbox" class="text-md font-josefin"></label>
+    <div class="lg:hidden absolute right-0">
+      <svg class="bg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
     </div>
     </div> 
 
-    <!--4-->
+    <!--4--
 
-    <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit " draggable="true">
+    <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit " draggable="true" id="fourth">
       <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
-      <label for="checkbox" class="text-md font-josefin">Read for 1 hour</label>
-      <div class="lg:hidden">
-        <svg class="ml-40" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+      <label for="checkbox" class="text-md font-josefin"></label>
+      <div class="lg:hidden absolute right-0">
+        <svg class="bg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
       </div>
       </div> 
 
-      <!--5-->
-      <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true">
+      <!--5--
+      <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true" id="fifth">
         <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
-        <label for="checkbox" class="text-md font-josefin">Pick up groceries</label>
-        <div class="lg:hidden">
-          <svg class="ml-36" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+        <label for="checkbox" class="text-md font-josefin"></label>
+        <div class="lg:hidden absolute right-0">
+          <svg class=" bg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
         </div>
         </div> 
 
-    <!--6-->
-    <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true">
+    <!--6--
+    <div class="flex flex-row border-b border-b-gray-400 borde bg-lightgrayblu  w-96 text-xl space-x-4 pb-2 pt-2  bg-whit" draggable="true" id="sixth">
       <input type="checkbox" name="" id="" class="w-4 bg-green-900 text-red-900 ml-1">
-      <label for="checkbox" class="text-md font-josefin">Complete Todo app on frontend mentor</label>
-      <div class="lg:hidden">
-        <svg class="ml-" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+      <label for="checkbox" class="text-md font-josefin"></label>
+      <div class="lg:hidden absolute right-0">
+        <svg class="bg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
       </div>
-    </div> 
-
-
-
-
-     <!--the final div container 6-->
-   <div class="flex flex-row space-x- rounded-b- bg-lightgrayblu pt-3 pb-3 justify-center  shadow-lg font-josefin lg:space-x-12 "> 
-
-    <div class="lg:mt-2">
-    <p class="hover:text-blue-900 opacity-75">5 items left</p>
-    </div>
-
-    <div class="lg:relative lg:bg-none lg:mt-0 absolute shadow-xl rounded-lg top-48 lg:top-0 mt-96 flex border space-x-6 w-full pt-2 pb-2 lg:-left-8  lg:right-2 lg:w-24 lg:shadow-none lg:rounded-none lg:border-none " id="mobile-div">
-      <div class="flex flex-row space-x-16  lg:relative  mx-auto lg:space-x-2 lg:bg-transparent ">
-        <p class="hover:text-blue-700">All</p>
-        <p class="hover:text-blue-700">Active</p>
-        <p class="hover:text-blue-700">Completed</p>
-     </div>
-    </div>
-
-    <div class="lg:mt-2">
-      <p class="hover:text-blue-700 opacity-75 ml-24 lg:ml-0">clear completed</p>
-    </div>
-
-  </div>
+    </div> -->
 
 
 
    </div>
 
+   <!--the final div container 6-->
+   <div class="flex flex-row space-x- rounded-b- bg-lightgrayblu pt-3 pb-3 justify-center  shadow-lg font-josefin lg:space-x-12 bg-white rounded-lg" id="di"> 
+
+    <div class="lg:mt-2">
+     <p class="hover:text-blue-900 opacity-75">5 items left</p>
+     </div>  
+ 
+     <div class="lg:relative lg:bg-none lg:mt-0 absolute shadow-xl rounded-lg top-48 lg:top-0 mt-96 flex border space-x-6 w-full pt-2 pb-2 lg:-left-8  lg:right-2 lg:w-24 lg:shadow-none lg:rounded-none lg:border-none " id="mobile-div">
+       <div class="flex flex-row space-x-16  lg:relative  mx-auto lg:space-x-2 lg:bg-transparent ">
+         <p class="hover:text-blue-700">All</p>
+         <p class="hover:text-blue-700">Active</p>
+         <p class="hover:text-blue-700">Completed</p>
+      </div>
+     </div>
+ 
+     <div class="lg:mt-2">
+       <p class="hover:text-conblue opacity-75 ml-24 lg:ml-0">clear completed</p>
+     </div>
+ 
+   </div> 
 
 </div>
 
@@ -172,6 +168,8 @@
 
 
 <script src="./main.js"></script>
+
+
 </body>
 </html>
 
