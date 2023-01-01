@@ -82,9 +82,14 @@ function addToDo(params) {
     let newTodo_list = document.createElement('div')
     newTodo_list.className = "flex flex-row  border-b  border-b-gray-400  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center"
 
+    //TO REMOVE ELEMENT AFTER IT SURPASSES 5 TIMES
       for (let i = 0; i < toDo.length; i++) {
-      newTodo_list.innerHTML = newTodo.value;
+      if (i <= 4) {
+        newTodo_list.innerHTML = newTodo.value;
       todo_wrapper.appendChild(newTodo_list);
+      } else {
+        newTodo_list.remove()
+      }
  }
 
 
@@ -113,9 +118,12 @@ function addToDo(params) {
 
     }
 
+//THE ITEM COUNTER
     counter--
+    counter = Math.max(counter,0)
     countingNum.innerHTML = counter
       
+    
 }
 
      
