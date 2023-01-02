@@ -72,14 +72,20 @@ const toDo = []
 const countingNum = document.getElementById('counter')
 
 
+
 let counter = 5
 function addToDo(params) {
-    
+   
+    let del = document.createElement('button')
+    let newTod = document.createElement('div')
+    let checkingbox = document.createElement('input')
+
+    //let newTod = document.createElement('div')
  //THIS CREATED ANOTHER DIV BOX ON THE WEB PAGE THORUGH JS   
    if (newTodo.value != '') {
     toDo.push(newTodo.value)
 
-    let newTodo_list = document.createElement('div')
+    let newTodo_list = newTod
     newTodo_list.className = "flex flex-row  border-b  border-b-gray-400  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center"
 
     //TO REMOVE ELEMENT AFTER IT SURPASSES 5 TIMES
@@ -93,30 +99,52 @@ function addToDo(params) {
  }
 
 
+ //let del = document.createElement('button')
  //THIS IS USED TO BUILD ANOTHER DIV BUTTON
      if (toDo.length > 0) {
+        
        for (let j = 0; j < toDo.length; j++) {
-            let delete_todo = document.createElement('button')
+        let delete_todo = del
          delete_todo.className = "flex  right-1 absolute lg:hidden lg:text-black text-gray-400"
          delete_todo.innerHTML = "X"
           newTodo_list.appendChild(delete_todo)  
+
+         function todoo(params) {
+            todo_wrapper.removeChild(newTodo_list);
+            counter++;
+            countingNum.innerHTML = counter
+         }
+
+         delete_todo.addEventListener('click',todoo)
         }
       }
 
+      
 
- //THIS IS USED TO CREATE A CHECKBOX ON THE HTML WEB PAGE    
-      if (toDo.length > 0) {
+ //THIS IS USED TO CREATE A CHECKBOX ON THE HTML WEB PAGE 
+ //let checkingbox = document.createElement('input')   
+      if (toDo.length > 0 ) {
         for (let b = 0; b < toDo.length; b++) {
-            let checkingbox = document.createElement('input')
-            checkingbox.type = "checkbox";
-           checkingbox.className = "flex absolute left-0"
+            let checkBox = checkingbox
+            checkBox.type = "checkbox";
+           checkBox.className = "flex absolute left-0"
           newTodo_list.appendChild(checkingbox)
+
+          function chckBox(params) {
+            if (checkBox.checked) {
+               newTodo_list.className = "line-through" 
+            }
         }
-    }
 
-   
+        } 
 
-    }
+        
+
+    } 
+
+
+  
+    
 
 //THE ITEM COUNTER
     counter--
@@ -126,7 +154,7 @@ function addToDo(params) {
     
 }
 
-     
+}    
 
      
 
