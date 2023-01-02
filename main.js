@@ -74,6 +74,7 @@ const countingNum = document.getElementById('counter')
 
 
 let counter = 5
+
 function addToDo(params) {
    
     let del = document.createElement('button')
@@ -105,14 +106,16 @@ function addToDo(params) {
         
        for (let j = 0; j < toDo.length; j++) {
         let delete_todo = del
-         delete_todo.className = "flex  right-1 absolute lg:hidden lg:text-black text-gray-400"
+         delete_todo.className = "flex  right-1 absolute lg:hidde lg:text-black text-gray-400"
          delete_todo.innerHTML = "X"
           newTodo_list.appendChild(delete_todo)  
 
          function todoo(params) {
             todo_wrapper.removeChild(newTodo_list);
             counter++;
+            counter = Math.max(counter, 0) 
             countingNum.innerHTML = counter
+            
          }
 
          delete_todo.addEventListener('click',todoo)
@@ -125,17 +128,24 @@ function addToDo(params) {
  //let checkingbox = document.createElement('input')   
       if (toDo.length > 0 ) {
         for (let b = 0; b < toDo.length; b++) {
-            let checkBox = checkingbox
+            let checkBox = checkingbox;
             checkBox.type = "checkbox";
-           checkBox.className = "flex absolute left-0"
-          newTodo_list.appendChild(checkingbox)
+           checkBox.className = "flex absolute left-0";
+          newTodo_list.appendChild(checkingbox);
 
-          function chckBox(params) {
+          function checkboxChanged(params) {
             if (checkBox.checked) {
-               newTodo_list.className = "line-through" 
+              newTodo_list.className = "line-through bg-whit flex flex-row  border-b  border-b-gray-400  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center";
+              counter--;
+            counter = Math.max(counter, 0) 
+            countingNum.innerHTML = counter
+            console.log(countingNum.value)
+            } else {
+              newTodo_list.className = 'bg-whit flex flex-row  border-b  border-b-gray-400  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center';
             }
-        }
-
+          }
+        
+          checkBox.addEventListener('change',checkboxChanged);
         } 
 
         
@@ -144,14 +154,7 @@ function addToDo(params) {
 
 
   
-    
-
-//THE ITEM COUNTER
-    counter--
-    counter = Math.max(counter,0)
-    countingNum.innerHTML = counter
-      
-    
+     
 }
 
 }    
@@ -160,8 +163,8 @@ function addToDo(params) {
 
 
 
-
-
+//EVENT LISTENER 
 newTodo.addEventListener(
     'change', addToDo
 )
+
