@@ -87,7 +87,7 @@ function addToDo(params) {
     toDo.push(newTodo.value)
 
     let newTodo_list = newTod
-    newTodo_list.className = "flex flex-row  border-b  border-b-gray-400  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center"
+    newTodo_list.className = "flex flex-row  border-b w-72 border-b-gray-400 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center"
 
     //TO REMOVE ELEMENT AFTER IT SURPASSES 5 TIMES
       for (let i = 0; i < toDo.length; i++) {
@@ -135,13 +135,13 @@ function addToDo(params) {
 
           function checkboxChanged(params) {
             if (checkBox.checked) {
-              newTodo_list.className = "line-through bg-whit flex flex-row  border-b  border-b-gray-400  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center";
+              newTodo_list.className = "line-through flex flex-row  border-b  border-b-gray-400  text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center";
               counter--;
             counter = Math.max(counter, 0) 
             countingNum.innerHTML = counter
             console.log(countingNum.value)
             } else {
-              newTodo_list.className = 'bg-whit flex flex-row  border-b  border-b-gray-400  w-96 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center';
+              newTodo_list.className = 'flex flex-row  border-b  border-b-gray-400   text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center';
             }
           }
         
