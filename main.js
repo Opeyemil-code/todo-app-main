@@ -74,17 +74,18 @@ const todoList = []
 const countingNum = document.getElementById('counter')
 const cC = document.getElementById('clear-completed')
 
+function createld() {
+    const uniqueId = Math.floor(100000000 + Math.random() * 900000000);
+  return uniqueId;
+}
+
+
 function todoGen(){
-  function createld(params) {
-    const uniqueNumber = Math.floor(Math.random()* 100000000)
-    return uniqueNumber.padStart(8,'0');
+ 
 }
 
 }
 
-console.log(createld())
-console.log(createld())
-console.log(createld())
 
 
 function handleAddTodo(params) {
