@@ -70,13 +70,14 @@ lightMode.addEventListener(
 const todo_wrapper = document.getElementById('todo');
 const newTodo = document.getElementById('search');
 const toDo = []
+const todoList = []
 const countingNum = document.getElementById('counter')
 const cC = document.getElementById('clear-completed')
 
+function todoGen(){
+}
 
-let counter = 5
-
-function addToDo(params) {
+function handleAddTodo(params) {
    
     let del = document.createElement('button')
     let newTod = document.createElement('div')
