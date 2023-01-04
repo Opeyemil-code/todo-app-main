@@ -68,9 +68,9 @@ lightMode.addEventListener(
 
 //FUNCTIONALITY OF ADDING TO DO TASKS
 const todo_wrapper = document.getElementById('todo');
-const newTodo = document.getElementById('search');
+const todo = document.getElementById('search');
 const toDo = []
-const todoList = []
+const todoList = [newTodo]
 const countingNum = document.getElementById('counter')
 const cC = document.getElementById('clear-completed')
 
@@ -81,10 +81,20 @@ function createld() {
 
 
 function todoGen(){
- 
+  let text = newTodo.textContent
+  let id= createld()
+  let done = false
+
+  const newTodo = {
+    property1 : text,
+    property2: id,
+    prperty3: done,
+  }
+  
 }
 
-}
+
+
 
 
 
@@ -96,8 +106,8 @@ function handleAddTodo(params) {
 
     //let newTod = document.createElement('div')
  //THIS CREATED ANOTHER DIV BOX ON THE WEB PAGE THORUGH JS   
-   if (newTodo.value != '') {
-    toDo.push(newTodo.value)
+   if (todo.value != '') {
+    toDo.push(todo.value)
 
     let newTodo_list = newTod
     newTodo_list.className = "flex flex-row  border-b w-72 border-b-gray-400 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center w-full"
@@ -105,7 +115,7 @@ function handleAddTodo(params) {
     //TO REMOVE ELEMENT AFTER IT SURPASSES 5 TIMES
       for (let i = 0; i < toDo.length; i++) {
      if (i <= 4) {
-        newTodo_list.innerHTML = newTodo.value;
+        newTodo_list.innerHTML = todo.value;
       todo_wrapper.appendChild(newTodo_list);
       } else {
        newTodo_list.remove()
@@ -198,7 +208,7 @@ function handleAddTodo(params) {
 
 
 //EVENT LISTENER 
-newTodo.addEventListener(
+todo.addEventListener(
     'change', handleAddTodo
 )
 
