@@ -75,7 +75,17 @@ const countingNum = document.getElementById('counter')
 const cC = document.getElementById('clear-completed')
 
 function todoGen(){
+  function createld(params) {
+    const uniqueNumber = Math.floor(Math.random()* 100000000)
+    return uniqueNumber.padStart(8,'0');
 }
+
+}
+
+console.log(createld())
+console.log(createld())
+console.log(createld())
+
 
 function handleAddTodo(params) {
    
@@ -188,6 +198,6 @@ function handleAddTodo(params) {
 
 //EVENT LISTENER 
 newTodo.addEventListener(
-    'change', addToDo
+    'change', handleAddTodo
 )
 
