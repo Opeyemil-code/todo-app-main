@@ -70,7 +70,7 @@ lightMode.addEventListener(
 const todo_wrapper = document.getElementById('todo');
 const todo = document.getElementById('search');
 const toDo = []
-const todoList = [newTodo]
+const todoList = []
 const countingNum = document.getElementById('counter')
 const cC = document.getElementById('clear-completed')
 
@@ -161,8 +161,8 @@ function handleAddTodo(params) {
 
           function checkboxChanged(params) {
             if (checkBox.checked) {
-              counter--
-              countingNum.innerHTML = counter
+             // counter--
+              //countingNum.innerHTML = counter
               console.log(countingNum)
               newTodo_list.className = "line-through flex flex-row  border-b  border-b-gray-400  text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center w-full";
             console.log(countingNum.value)
