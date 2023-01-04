@@ -117,7 +117,7 @@ function addToDo(params) {
             todo_wrapper.removeChild(newTodo_list);
            // counter++;
            // counter = Math.max(counter, 0) ;
-            countingNum.innerHTML = counter;
+           // countingNum.innerHTML = counter;
             
          }
 
@@ -139,8 +139,7 @@ function addToDo(params) {
 
           function checkboxChanged(params) {
             if (checkBox.checked) {
-              counter++
-            //counter = Math.max(counter, 0) 
+              counter--
               countingNum.innerHTML = counter
               console.log(countingNum)
               newTodo_list.className = "line-through flex flex-row  border-b  border-b-gray-400  text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center w-full";
@@ -156,7 +155,7 @@ function addToDo(params) {
             if (checkBox.checked) {
             // counter--
             //counter = Math.max(counter, 0) 
-            countingNum.innerHTML = counter
+            //countingNum.innerHTML = counter
               newTodo_list.remove()
             } 
             
