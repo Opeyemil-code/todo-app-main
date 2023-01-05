@@ -86,11 +86,11 @@ function todoGen(){
   let done = false
 
   const newTodo = {
-    property1 : text,
-    property2: id,
-    prperty3: done,
+    text,
+    id,
+    done,
   }
-  
+  return newTodo
 }
 
 
@@ -103,7 +103,21 @@ function handleAddTodo(params) {
     let del = document.createElement('button')
     let newTod = document.createElement('div')
     let checkingbox = document.createElement('input')
+  newTod.className = "flex flex-row  border-b w-72 border-b-gray-400 text-xl space-x-4 pb-2 pt-2 rounded-t-md  bg-whit text-center mx-auto justify-center w-full"
 
+// femi's functionality 
+  
+  todoList = [...todoList, todoGen()]
+  todoList.map((item) => {
+    let newDiv = newTod
+    newDiv.innerHTML = item.text 
+    newDiv.appendChild(del)  
+    newDiv.appendChild(checkingbox)
+    todo_wrapper.appendChild(newDiv)
+    
+  });
+
+  
     //let newTod = document.createElement('div')
  //THIS CREATED ANOTHER DIV BOX ON THE WEB PAGE THORUGH JS   
    if (todo.value != '') {
@@ -121,6 +135,7 @@ function handleAddTodo(params) {
        newTodo_list.remove()
       }
  }
+
  ///////////////////////////////////////////////////////////////////////////////////
  //////////////////////////////////////////////////////////
 
