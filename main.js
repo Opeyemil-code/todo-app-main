@@ -80,7 +80,7 @@ function createld() {
 }
 
 
-function todoGen(){
+/*function todoGen(){
   let text = newTodo.textContent
   let id= createld()
   let done = false
@@ -91,7 +91,7 @@ function todoGen(){
     done,
   }
   return newTodo
-}
+}*/
 
 
 
@@ -107,7 +107,7 @@ function handleAddTodo(params) {
 
 // femi's functionality 
   
-  todoList = [...todoList, todoGen()]
+  /*todoList = [...todoList, todoGen()]
   todoList.map((item) => {
     let newDiv = newTod
     newDiv.innerHTML = item.text 
@@ -115,7 +115,7 @@ function handleAddTodo(params) {
     newDiv.appendChild(checkingbox)
     todo_wrapper.appendChild(newDiv)
     
-  });
+  }); */
 
   
     //let newTod = document.createElement('div')
